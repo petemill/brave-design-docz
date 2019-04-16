@@ -1,0 +1,16 @@
+{
+  "name": "brave-design-docz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "docz": "^1.0.3",
+    "docz-theme-default": "^1.0.3"
+  }
+}
