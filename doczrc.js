@@ -1,6 +1,10 @@
 const path = require('path')
 
 export default {
+  public: './public',
+  htmlContext: {
+    favicon: 'public/img/favicon.ico'
+  },
   menu: [
     'Home',
     {
@@ -44,7 +48,7 @@ export default {
         'Branding assets',
         'Creator assets',
         'Illustrations',
-        'Press materials'
+        'Press material'
       ]
     }
   ],
@@ -52,7 +56,14 @@ export default {
   wrapper: 'src/wrapper',
   themeConfig: {
     showPlaygroundEditor: false,
-    mode: 'light'
+    mode: 'light',
+    colors: {
+      primary: '#FF7654'
+    },
+    logo: {
+      src: 'public/img/logo.svg',
+      width: 150
+    }
   },
   onCreateWebpackChain: (config, isDev, argv) =>
     config.resolve.alias
