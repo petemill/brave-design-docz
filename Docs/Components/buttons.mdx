@@ -4,11 +4,66 @@ menu: Components
 ---
 
 import { Button } from 'brave-ui'
+import { Playground, Props } from 'docz'
+import Components from 'utilities/Components'
 
 # Buttons
+Use when requiring the user to take an action.
+Different types of buttons create different user expectations about the button's action...
+**Hover and Click these examples to see interactive states**
+
+## Levels
+Use different levels to create a _hierarchy_ of importance
+ - **Primary -** Reserved for the most important or suggested action of a UI. There should only be one per UI.
+ - **Default (Secondary) -** Normal and default emphasis. Should be used also when there is no default action to take.
+ - **Tertiary -** Low emphasis. Used for less important actions. Can be styled with accent or subtle palette (see `Type`).
+
+<Playground>
+  <Components>
+    <Button text="Primary" level="primary" />
+    <Button text="Secondary" level="secondary" />
+    <Button text="Tertiary" level="tertiary" />
+  </Components>
+</Playground>
 
 ## Types
+Let the user know what type of interaction it is
+<Playground>
+  <Components>
+    <Button text="Default" type="default" />
+    <Button text="Accent" type="accent" />
+    <Button text="Warn" type="warn" />
+    <Button text="Subtle" type="subtle" />
+    <Button text="Disabled" disabled />
+  </Components>
+</Playground>
 
-### Primary
+_Accent_ can be either `brave` or `rewards`
+<Components>
+  <Button text="brave" brand="brave" type="accent" />
+  <Button text="rewards" brand="rewards" type="accent" />
+</Components>
 
-<Button type="Primary" text="Click me" onClick={() => {}} />
+## Sizes
+<Playground>
+  <Components>
+    <Button
+      size="small"
+      level="secondary"
+      type="default"
+      text="Small"
+    />
+    <Button
+      size="medium"
+      level="secondary"
+      type="accent"
+      text="Medium"
+    />
+    <Button
+      size="large"
+      level="secondary"
+      type="warn"
+      text="Large"
+    />
+  </Components>
+</Playground>
